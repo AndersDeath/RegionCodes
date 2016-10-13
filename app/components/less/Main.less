@@ -1,0 +1,63 @@
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+}
+
+body {
+  margin: 0 auto;;
+  padding: 0;
+  background-image: url('../img/bg.jpg');
+  background-attachment: fixed;
+}
+.regionList {
+  margin: 0 auto;
+  width: 516px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding:20px;
+  .search {
+    width: 225px;
+    padding: 4px;
+    border: 1px solid #333;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .searchLabel {
+    font-size: 50px;
+    display: inline;
+    font-weight: normal;
+  }
+  .line {
+    padding: 6px;
+    overflow: hidden;
+    border-top: 1px solid #c2c2c2;
+    border-left: 1px solid #c2c2c2;
+    border-right: 1px solid #c2c2c2;
+    background: #e8e8e8;
+    line-height: 20px;
+    .transition(0.3s);
+    &:last-child {
+      border-bottom: 1px solid #c2c2c2;
+    }
+    &:hover {
+      background: #cbcaca;
+    }
+  }
+  .code {
+    float: left;
+    width: 30px;
+    text-align: center;
+    border: 1px solid #333;
+    padding: 3px;
+    margin: 0 0 0 5px;
+    background-color: #fff;
+  }
+  .regionName {
+    float:left;
+    text-align: left;
+    width: 200px;
+  }
+}
