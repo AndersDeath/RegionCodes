@@ -1,6 +1,8 @@
-body {
+* {
   margin: 0 auto;
   padding: 0;
+}
+body {
   background-image: url('../img/bg.jpg');
   background-attachment: fixed;
 }
@@ -11,20 +13,65 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
 }
-.regionList .search {
-  width: 225px;
-  padding: 4px;
-  border: 1px solid #333;
-  font-size: 50px;
-  text-align: center;
-  margin-bottom: 20px;
+.regionList .top {
+  height: 62px;
 }
-.regionList .searchLabel {
+.regionList .top .search {
+  width: 390px;
+  padding: 12px;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
+  border-right: 0;
+  font-size: 16px;
+  display: block;
+  float: left;
+}
+.regionList .top .searchLabel {
   font-size: 50px;
   display: inline;
   font-weight: normal;
 }
-.regionList .line {
+.regionList .top .searchSwitch {
+  width: 100px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  float: right;
+}
+.regionList .top .searchSwitch button {
+  width: 50px;
+  height: 43px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  background-color: #709cfe;
+  color: #ededed;
+  border: 0;
+}
+.regionList .top .searchSwitch button.active {
+  background-color: #195cf1;
+  color: #fff;
+}
+.regionList .top .searchSwitch button:first-child {
+  border-right: 0;
+}
+.regionList .top .searchSwitch button:hover {
+  background-color: #1451da;
+}
+.regionList .top .helpBlock {
+  position: fixed;
+  width: 178px;
+  height: 112px;
+  background: #fff;
+  margin-left: 560px;
+  padding: 10px;
+}
+.regionList .content .line {
   padding: 6px;
   overflow: hidden;
   border-top: 1px solid #c2c2c2;
@@ -37,13 +84,13 @@ body {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-.regionList .line:last-child {
+.regionList .content .line:last-child {
   border-bottom: 1px solid #c2c2c2;
 }
-.regionList .line:hover {
+.regionList .content .line:hover {
   background: #cbcaca;
 }
-.regionList .code {
+.regionList .content .line .code {
   float: left;
   width: 30px;
   text-align: center;
@@ -52,7 +99,7 @@ body {
   margin: 0 0 0 5px;
   background-color: #fff;
 }
-.regionList .regionName {
+.regionList .content .line .regionName {
   float: left;
   text-align: left;
   width: 200px;

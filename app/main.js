@@ -3,6 +3,7 @@ require.config({
   paths: {
     "react": "react-with-addons",
     "JSXTransformer": "JSXTransformer",
+    "Tools": "Tools",
     "com":'../components/jsx',
     "db":'../db'
   },

@@ -4,60 +4,107 @@
 	-ms-transition:     @transition;
 	-o-transition:      @transition;
 }
-
+* {
+	margin: 0 auto;
+	padding: 0;
+}
 body {
-  margin: 0 auto;;
-  padding: 0;
   background-image: url('../img/bg.jpg');
   background-attachment: fixed;
 }
+
 .regionList {
   margin: 0 auto;
   width: 516px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.8);
   padding:20px;
-  .search {
-    width: 225px;
-    padding: 4px;
-    border: 1px solid #333;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .searchLabel {
-    font-size: 50px;
-    display: inline;
-    font-weight: normal;
-  }
-  .line {
-    padding: 6px;
-    overflow: hidden;
-    border-top: 1px solid #c2c2c2;
-    border-left: 1px solid #c2c2c2;
-    border-right: 1px solid #c2c2c2;
-    background: #e8e8e8;
-    line-height: 20px;
-    .transition(0.3s);
-    &:last-child {
-      border-bottom: 1px solid #c2c2c2;
-    }
-    &:hover {
-      background: #cbcaca;
-    }
-  }
-  .code {
-    float: left;
-    width: 30px;
-    text-align: center;
-    border: 1px solid #333;
-    padding: 3px;
-    margin: 0 0 0 5px;
-    background-color: #fff;
-  }
-  .regionName {
-    float:left;
-    text-align: left;
-    width: 200px;
-  }
+	.top {
+		height: 62px;
+		.search {
+			width: 390px;
+			padding: 12px;
+			border-top: 1px solid #333;
+			border-left: 1px solid #333;
+			border-bottom: 1px solid #333;
+			border-right:0;
+			font-size: 16px;
+			display: block;
+			float: left;
+		}
+		.searchLabel {
+			font-size: 50px;
+			display: inline;
+			font-weight: normal;
+		}
+		.searchSwitch{
+			width: 100px;
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.9);
+			border-top: 1px solid #333;
+			border-right: 1px solid #333;
+			border-bottom: 1px solid #333;
+			float: right;
+			button {
+				width: 50px;
+				height: 43px;
+				cursor: pointer;
+				.transition(0.3s);
+				background-color: rgb(112, 156, 254);
+				color: #ededed;
+				border:0;
+				&.active {
+					background-color: rgb(25, 92, 241);
+					color: #fff;
+				}
+			}
+			button:first-child {
+				border-right: 0;
+			}
+			button:hover {
+				background-color: rgb(20, 81, 218);
+			}
+		}
+		.helpBlock{
+			position: fixed;
+	    width: 178px;
+	    height: 112px;
+	    background: #fff;
+	    margin-left: 560px;
+	    padding: 10px;
+		}
+	}
+	.content {
+		.line {
+			padding: 6px;
+			overflow: hidden;
+			border-top: 1px solid #c2c2c2;
+			border-left: 1px solid #c2c2c2;
+			border-right: 1px solid #c2c2c2;
+			background: #e8e8e8;
+			line-height: 20px;
+			.transition(0.3s);
+			&:last-child {
+				border-bottom: 1px solid #c2c2c2;
+			}
+			&:hover {
+				background: #cbcaca;
+			}
+			.code {
+				float: left;
+				width: 30px;
+				text-align: center;
+				border: 1px solid #333;
+				padding: 3px;
+				margin: 0 0 0 5px;
+				background-color: #fff;
+			}
+			.regionName {
+				float:left;
+				text-align: left;
+				width: 200px;
+			}
+		}
+	}
+
 }
